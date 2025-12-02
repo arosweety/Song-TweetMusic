@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium - TwEEtMuSiC</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/premium.css">
+     <link rel="stylesheet" href="css/style.css">
+     <script src="js/premium.js"></script>
+
+<style>
+   
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo"><i class="fa-solid fa-music"></i> TwEEtMuSiC</div>
+    <ul class="nav-links">
+        <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="albums.html"><i class="fa-solid fa-compact-disc"></i> Albums</a></li>
+        <li><a href="artist.html"><i class="fa-solid fa-microphone"></i> Artist</a></li>
+        <li><a href="premium.html"><i class="fa-solid fa-star"></i> Premium</a></li>
+    </ul>
+    <div class="nav-right">
+        <!-- <div class="search-box"><input type="text" placeholder="Search songs, artists..."><i class="fa-solid fa-search"></i></div> -->
+        <!-- <a href="login.html" class="btn login-btn"><i class="fa-solid fa-right-to-bracket"></i> Login</a> -->
+        <a href="logout.html" class="btn logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+    </div>
+</nav>
+
+<!-- PREMIUM PLANS -->
+<div class="page-container">
+    <h1 class="page-title">✨ Premium Plans</h1>
+    <div class="premium-grid">
+        <div class="premium-card">
+            <h2>Basic</h2>
+            <p>Ad-free music</p>
+            <h1>₹99/mo</h1>
+            <ul>
+                <li>Ad-free listening</li>
+                <li>Access to trending songs</li>
+            </ul>
+            <button onclick="pay('basic')">Choose Plan</button>
+        </div>
+        <div class="premium-card popular">
+            <h2>Pro</h2>
+            <p>Unlimited downloads</p>
+            <h1>₹149/mo</h1>
+            <ul>
+                <li>Everything in Basic</li>
+                <li>Offline downloads</li>
+                <li>High-quality audio</li>
+            </ul>
+            <button onclick="pay('pro')">Choose Plan</button>
+        </div>
+        <div class="premium-card">
+            <h2>Family</h2>
+            <p>6 accounts</p>
+            <h1>₹249/mo</h1>
+            <ul>
+                <li>Everything in Pro</li>
+                <li>6 accounts for family/friends</li>
+                <li>Separate playlists & recommendations</li>
+            </ul>
+            <button onclick="pay('family')">Choose Plan</button>
+        </div>
+    </div>
+</div>
+
+<!-- WHY PREMIUM -->
+<div class="why-premium">
+    <h2>Why Choose Premium?</h2>
+    <p>MuSiCTwEEt Premium unlocks the best music experience. Enjoy uninterrupted music, offline listening, and high-quality audio anytime, anywhere.</p>
+    <div class="advantages">
+        <div class="adv-card"><i class="fa-solid fa-bolt"></i><h3>Ad-Free</h3><p>Listen without interruptions.</p></div>
+        <div class="adv-card"><i class="fa-solid fa-cloud-arrow-down"></i><h3>Offline Mode</h3><p>Download songs and play offline.</p></div>
+        <div class="adv-card"><i class="fa-solid fa-music"></i><h3>High Quality</h3><p>Crystal-clear audio experience.</p></div>
+        <div class="adv-card"><i class="fa-solid fa-user-group"></i><h3>Family Access</h3><p>Share your plan with loved ones.</p></div>
+        <div class="adv-card"><i class="fa-solid fa-star"></i><h3>Exclusive Content</h3><p>Access premium-only tracks.</p></div>
+    </div>
+</div>
+
+<!-- FAQ SECTION -->
+<div class="faq-section">
+    <h2>❓ Premium FAQs</h2>
+    <div class="faq-item">
+        <button>What payment methods are accepted? <i class="fa-solid fa-plus"></i></button>
+        <div class="answer">We accept all UPI apps including Google Pay, PhonePe, Paytm, and UPI QR scans.</div>
+    </div>
+    <div class="faq-item">
+        <button>Can I switch plans later? <i class="fa-solid fa-plus"></i></button>
+        <div class="answer">Yes, you can upgrade or downgrade your plan anytime through your account settings.</div>
+    </div>
+    <div class="faq-item">
+        <button>Is my payment secure? <i class="fa-solid fa-plus"></i></button>
+        <div class="answer">All payments are handled through UPI apps with end-to-end encryption.</div>
+    </div>
+</div>
+
+<!-- QR CODE MODAL -->
+<div id="qrModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Scan QR to Pay</h2>
+        <img id="qrCode" src="img/qr-basic.png" alt="QR Code">
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section"><h2 class="footer-logo">🎵 TwEEtMuSiC</h2><p>Your daily music partner.</p></div>
+        <div class="footer-section"><h3>Quick Links</h3><ul><li><a href="index.html">Home</a></li><li><a href="albums.html">Albums</a></li><li><a href="artist.html">Artist</a></li><li><a href="premium.html">Premium</a></li></ul></div>
+        <div class="footer-section"><h3>Contact</h3><p>Email: support@musictweet.com</p><p>Phone: +91 98765 43210</p></div>
+        <div class="footer-section"><h3>Follow Us</h3><div class="social-icons"><a href="#"><i class="fa-solid fa-globe"></i></a><a href="#"><i class="fa-brands fa-facebook"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-whatsapp"></i></a><a href="#"><i class="fa-brands fa-x-twitter"></i></a></div></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 TwEEtMuSiC. All Rights Reserved.</p></div>
+</footer>
+
+
+</body>
+</html>

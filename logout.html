@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout - TwEEtMuSiC</title>
+
+    <style>
+        /* BACKGROUND */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(130deg, #05010a, #1a001a, #330033);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Poppins, sans-serif;
+            overflow: hidden;
+        }
+
+        /* Floating Music Notes */
+        .music-note {
+            position: absolute;
+            font-size: 35px;
+            color: #ff4dd2;
+            opacity: 0.7;
+            animation: floatNote 4s infinite ease-in-out;
+        }
+
+        @keyframes floatNote {
+            0% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-22px) rotate(10deg); }
+            100% { transform: translateY(0) rotate(0deg); }
+        }
+
+        /* LOGOUT BOX */
+        .logout-box {
+            width: 350px;
+            padding: 30px;
+            text-align: center;
+            border-radius: 18px;
+            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 25px rgba(255,77,210,0.25);
+            transform: translateY(40px);
+            opacity: 0;
+            animation: slideFade 1s ease forwards;
+        }
+
+        /* Entrance animation */
+        @keyframes slideFade {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .logout-box h1 {
+            font-size: 28px;
+            color: #ff4dd2;
+            margin-bottom: 20px;
+            text-shadow: 0 0 12px rgba(255,77,210,0.3);
+        }
+
+        .logout-box a {
+            display: inline-block;
+            padding: 12px 28px;
+            background: #ff4dd2;
+            color: #000;
+            font-weight: 600;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 17px;
+            transition: 0.3s;
+        }
+
+        .logout-box a:hover {
+            background: #ff1ac6;
+            transform: scale(1.07);
+            box-shadow: 0 0 20px #ff4dd2;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- Floating animated emojis -->
+    <div class="music-note" style="top: 12%; left: 20%;">🎵</div>
+    <div class="music-note" style="top: 70%; left: 10%; animation-delay: .8s;">🎶</div>
+    <div class="music-note" style="top: 40%; left: 80%; animation-delay: .4s;">🎧</div>
+    <div class="music-note" style="top: 20%; left: 60%; animation-delay: 1s;">🎼</div>
+
+    <div class="logout-box">
+        <h1>You are logged out</h1>
+        <a href="login.html">Login Again</a>
+    </div>
+
+</body>
+</html>

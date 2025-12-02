@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hit sad - MuSiCTwEEt</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="css/albums.css">
+    <style>
+        /* GENERAL STYLES */
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #0d0d0d;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: #111;
+            border-bottom: 2px solid #ff0099;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #ff66cc;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links .active {
+            color: #ff33aa;
+            text-shadow: 0 0 10px #ff33aa;
+        }
+
+        /* PAGE CONTAINER */
+        .page-container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 50px 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* ANIMATIONS */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes glowIn {
+            0% { box-shadow: 0 0 0px #ff33aa; }
+            100% { box-shadow: 0 0 30px #ff33aa; }
+        }
+
+        /* ALBUM HEADER */
+        .album-header {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            background: #1a1a1a;
+            padding: 25px;
+            border-radius: 15px;
+            animation: fadeIn 1.3s ease-in-out;
+        }
+
+        .album-cover {
+            width: 240px;
+            height: 240px;
+            object-fit: cover;
+            border-radius: 15px;
+            animation: glowIn 2s infinite alternate;
+        }
+
+        .album-info h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+            color: #ff66cc;
+            animation: fadeIn 1.5s;
+        }
+
+        /* SONG LIST */
+        .song-list {
+            margin-top: 40px;
+        }
+
+        .song-list h2 {
+            font-size: 30px;
+            color: #ff33aa;
+            border-left: 6px solid #ff33aa;
+            padding-left: 12px;
+            animation: fadeIn 1.6s ease-in-out;
+        }
+
+        .song-list ul {
+            list-style: none;
+            margin-top: 25px;
+        }
+
+        .song-list li {
+            display: flex;
+            flex-direction: column;
+            padding: 18px;
+            margin-bottom: 20px;
+            background: #131313;
+            border-left: 5px solid #ff33aa;
+            border-radius: 10px;
+            transition: 0.3s ease;
+            animation: fadeIn 1.2s ease;
+        }
+
+        .song-list li:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 20px #ff0099;
+        }
+
+        .song-list li span {
+            font-size: 18px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        audio {
+            width: 100%;
+            border-radius: 10px;
+            outline: none;
+        }
+
+        /* FOOTER */
+        footer {
+            margin-top: 60px;
+            background: #111;
+            padding: 40px 0;
+            border-top: 2px solid #ff0099;
+        }
+
+        .footer-container {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .footer-logo {
+            color: #ff66cc;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .footer-section h3 {
+            color: #ff99dd;
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-section a:hover {
+            color: #ff33aa;
+        }
+
+        .social-icons a {
+            margin-right: 12px;
+            font-size: 22px;
+            color: #ff55bb;
+        }
+
+        .social-icons a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            margin-top: 20px;
+            text-align: center;
+            color: #bbb;
+            border-top: 1px solid #333;
+            padding-top: 15px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .album-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .album-cover {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo"><i class="fa-solid fa-music"></i> MuSiCTwEEt</div>
+
+    <ul class="nav-links">
+        <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="albums.html" class="active"><i class="fa-solid fa-compact-disc"></i> Albums</a></li>
+        <li><a href="artist.html"><i class="fa-solid fa-microphone"></i> Artist</a></li>
+        <li><a href="premium.html"><i class="fa-solid fa-star"></i> Premium</a></li>
+    </ul>
+</nav>
+
+<!-- ALBUM DETAILS -->
+<div class="page-container">
+    <div class="album-header">
+        <img src="img/album3.jpg" alt="Love Melody" class="album-cover">
+        <div class="album-info">
+            <h1>sad of Vibe</h1>
+            <p>I act like I’m okay, but my heart knows I’m not. 💔</p>
+            
+        </div>
+    </div>
+
+    <!-- SONG LIST -->
+    <div class="song-list">
+        <h2>Tamil Songs</h2>
+        <ul>
+            <li><span>Immaye imaye</span><audio controls><source src="songs/sad1.mp3"></audio></li>
+            <li><span>Yepadi vanthayoo</span><audio controls><source src="songs/sad2.mp3"></audio></li>
+            <li><span>Pirai thedum iravile</span><audio controls><source src="songs/sad3.mp3"></audio></li>
+            <li><span>Po nee po</span><audio controls><source src="songs/sad4.mp3"></audio></li>
+            <li><span>Usurey poguthu</span><audio controls><source src="songs/sad5.mp3"></audio></li>
+            <li><span>Thodu Vaanam</span><audio controls><source src="songs/sad6.mp3"></audio></li>
+            <li><span>Enadhuirea</span><audio controls><source src="songs/sad7.mp3"></audio></li>
+            <li><span>Why this kolaveri</span><audio controls><source src="songs/sad8.mp3"></audio></li>
+            <li><span>Yennai maatrum kathaley</span><audio controls><source src="songs/sad9.mp3"></audio></li>
+            <li><span>Pathala Pathala</span><audio controls><source src="songs/sad10.mp3"></audio></li>
+            
+        </ul>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h2 class="footer-logo">🎵 MuSiCTwEEt</h2>
+            <p>Your daily music partner.</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="albums.html">Albums</a></li>
+                <li><a href="artist.html">Artist</a></li>
+                <li><a href="premium.html">Premium</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <p>Email: support@musictweet.com</p>
+            <p>Phone: +91 98765 43210</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#"><i class="fa-solid fa-globe"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        © 2025 MuSiCTwEEt. All Rights Reserved.
+    </div>
+</footer>
+
+</body>
+</html>

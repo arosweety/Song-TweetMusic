@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Albums - TwEEtMuSiC</title>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/albums.css">
+<script src="js/albums.js" defer></script>
+
+
+</head>
+<body>
+    
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo"><i class="fa-solid fa-music"></i> TwEEtMuSiC</div>
+    <ul class="nav-links">
+        <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="albums.html" class="active"><i class="fa-solid fa-compact-disc"></i> Albums</a></li>
+        <li><a href="artist.html"><i class="fa-solid fa-microphone"></i> Artist</a></li>
+        <li><a href="premium.html"><i class="fa-solid fa-star"></i> Premium</a></li>
+    </ul>
+    <div class="nav-right">
+        <div class="search-box">
+            <input type="text" placeholder="Search songs, artists...">
+            <i class="fa-solid fa-search"></i>
+        </div>
+        <a href="logout.html" class="btn logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+    </div>
+</nav>
+
+
+
+<!-- ALBUM GRID -->
+<div class="page-container">
+    <div class="album-grid">
+        <a href="album-love-melody.html" class="album-card romantic tamil" data-badge="Hot" data-rating="4.5">
+            <div class="album-img-container">
+                <img src="img/album1.jpg">
+                <div class="play-overlay"><i class="fa-solid fa-play"></i></div>
+                <audio class="preview-audio" src="songs/melody-preview.mp3" preload="none"></audio>
+            </div>
+            <h3>Love Melody</h3>
+            <p>“Every heartbeat of mine hums the tune of you.”</p>
+            <div class="rating">⭐⭐⭐⭐☆</div>
+        </a>
+
+        <a href="album-beats-soul.html" class="album-card pop hindi" data-badge="New" data-rating="4.0">
+            <div class="album-img-container">
+                <img src="img/album2.jpg">
+                <div class="play-overlay"><i class="fa-solid fa-play"></i></div>
+                <audio class="preview-audio" src="songs/beats-preview.mp3" preload="none"></audio>
+            </div>
+            <h3>Beats of Soul</h3>
+            <p>“Feel the beat, live the vibe.”</p>
+            <div class="rating">⭐⭐⭐⭐☆</div>
+        </a>
+
+        <a href="album-retro-vibes.html" class="album-card jazz malayalam" data-badge="Trending" data-rating="4.2">
+            <div class="album-img-container">
+                <img src="img/album3.jpg">
+                <div class="play-overlay"><i class="fa-solid fa-play"></i></div>
+                <audio class="preview-audio" src="songs/retro-preview.mp3" preload="none"></audio>
+            </div>
+            <h3>Solo Broken Songs</h3>
+            <p>“Tears fall like lyrics written in invisible ink.”</p>
+            <div class="rating">⭐⭐⭐⭐☆</div>
+        </a>
+
+        <a href="album-rock-fiesta.html" class="album-card rock tamil" data-badge="Hot" data-rating="4.8">
+            <div class="album-img-container">
+                <img src="img/album4.jpg">
+                <div class="play-overlay"><i class="fa-solid fa-play"></i></div>
+                <audio class="preview-audio" src="songs/rock-preview.mp3" preload="none"></audio>
+            </div>
+            <h3>Fiesta Eng>3</h3>
+            <p>“Freestyle my mood, remix my attitude.”</p>
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+        </a>
+    </div>
+</div>
+
+<!-- CATEGORIES -->
+<section class="categories">
+    <h2>🎼 Explore Categories</h2>
+    <div class="cat-row">
+        <div class="cat-box tamil" data-lang="tamil">Tamil Hits</div>
+        <div class="cat-box pop" data-lang="hindi">Hindi</div>
+        <div class="cat-box jazz" data-lang="malayalam">Malayalam</div>
+        <div class="cat-box edm" data-lang="telugu">Telugu</div>
+        <div class="cat-box romantic" data-lang="kannada">Kannada</div>
+        <div class="cat-box rock" data-lang="english">English</div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h2 class="footer-logo">🎵 TwEEtMuSiC</h2>
+            <p>Your daily music partner.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="albums.html">Albums</a></li>
+                <li><a href="artist.html">Artist</a></li>
+                <li><a href="premium.html">Premium</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <p>Email: support@musictweet.com</p>
+            <p>Phone: +91 98765 43210</p>
+        </div>
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#"><i class="fa-solid fa-globe"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2025 TwEEtMuSiC. All Rights Reserved.</p>
+    </div>
+</footer>
+
+
+</body>
+</html>

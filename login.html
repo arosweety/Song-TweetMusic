@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - TwEEtMuSiC</title>
+    <link rel="stylesheet" href="css/login.css">
+
+    
+
+    <script>
+        function loginUser() {
+            let email = document.getElementById("email").value;
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+
+            if (email === "" || username === "" || password === "") {
+                alert("Please fill all details");
+                return;
+            }
+
+            if (username === "Aro Sweety" && password === "youcandoit") {
+                window.location.href = "index.html";
+            } else {
+                alert("Invalid username or password");
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Floating Music Notes -->
+    <div class="music-note" style="top: 12%; left: 30%;">🎵</div>
+    <div class="music-note" style="top: 70%; left: 10%; animation-delay: 1s;">🎶</div>
+    <div class="music-note" style="top: 50%; left: 80%; animation-delay: 2s;">🎧</div>
+    <div class="music-note" style="top: 20%; left: 60%; animation-delay: 0.5s;">🎼</div>
+    <div class="music-note" style="top: 60%; left: 10%; animation-delay: 0.5s;">🎼</div>
+    <div class="music-note" style="top: 40%; left: 20%; animation-delay: 0.5s;">🎼</div>
+
+    <div class="login-container">
+        <h2>🎵 TwEEtMuSiC Login</h2>
+
+        <input type="email" id="email" placeholder="Enter Email">
+        <input type="text" id="username" placeholder="Enter Username">
+        <input type="password" id="password" placeholder="Enter Password">
+
+        <button onclick="loginUser()">Login</button>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artist - TwEEtMuSiC</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link  rel="stylesheet" href="css/artist.css">
+<script src="js/artist.js"></script>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo"><i class="fa-solid fa-music"></i> TwEEtMuSiC</div>
+    <ul class="nav-links">
+        <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="albums.html"><i class="fa-solid fa-compact-disc"></i> Albums</a></li>
+        <li><a href="artist.html"><i class="fa-solid fa-microphone"></i> Artist</a></li>
+        <li><a href="premium.html"><i class="fa-solid fa-star"></i> Premium</a></li>
+    </ul>
+     <div class="nav-right">
+        <div class="search-box">
+            <input type="text" placeholder="Search songs, artists...">
+            <i class="fa-solid fa-search"></i>
+        </div>
+        <!-- <a href="login.html" class="btn login-btn"><i class="fa-solid fa-right-to-bracket"></i> Login</a> -->
+        <a href="logout.html" class="btn logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+    </div>
+</nav>
+
+<div class="page-container">
+    <h1 class="page-title">🎙️ Trending Artists</h1>
+    <div class="artist-grid">
+
+        <div class="artist-card">
+            <img src="img/ar-rahman.jpg" alt="A.R. Rahman">
+            <h3>A.R. Rahman</h3>
+            <button class="play-btn" data-artist="ar-rahman"><i class="fa-solid fa-play"></i> Play Songs <span class="note">🎵</span></button>
+        </div>
+
+        <div class="artist-card">
+            <img src="img/anirudh.jpg" alt="Anirudh">
+            <h3>Anirudh</h3>
+            <button class="play-btn" data-artist="anirudh"><i class="fa-solid fa-play"></i> Play Songs <span class="note">🎵</span></button>
+        </div>
+
+        <div class="artist-card">
+            <img src="img/sid-sriram.jpg" alt="Sid Sriram">
+            <h3>Sid Sriram</h3>
+            <button class="play-btn" data-artist="sid-sriram"><i class="fa-solid fa-play"></i> Play Songs <span class="note">🎵</span></button>
+        </div>
+
+        <div class="artist-card">
+            <img src="img/sherya.jpg" alt="Shreya Ghoshal">
+            <h3>Shreya Ghoshal</h3>
+            <button class="play-btn" data-artist="shreya"><i class="fa-solid fa-play"></i> Play Songs <span class="note">🎵</span></button>
+        </div>
+        <div class="artist-card">
+            <img src="img/Andrea.jpg" alt="Shreya Ghoshal">
+            <h3>Andrea</h3>
+            <button class="play-btn" data-artist="shreya"><i class="fa-solid fa-play"></i> Play Songs <span class="note">🎵</span></button>
+        </div>
+        <div class="artist-card">
+            <img src="img/chinmayee.jpg" alt="Shreya Ghoshal">
+            <h3>chinmayee</h3>
+            <button class="play-btn" data-artist="shreya"><i class="fa-solid fa-play"></i> Play Songs <span class="note">🎵</span></button>
+        </div>
+        <div class="artist-card">
+            <img src="img/swethamohan.jpg" alt="Shreya Ghoshal">
+            <h3>swetha Mohan</h3>
+            <button class="play-btn" data-artist="shreya"><i class="fa-solid fa-play"></i> Play Songs <span class="note">🎵</span></button>
+        </div>
+        <div class="artist-card">
+            <img src="img/Sujatha Mohan.jpg" alt="Shreya Ghoshal">
+            <h3>Sujatha</h3>
+            <button class="play-btn" data-artist="shreya"><i class="fa-solid fa-play"></i> Play Songs <span class="note">🎵</span></button>
+        </div>
+        
+        
+
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="songModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="artistName">Artist Songs</h2>
+        <ul id="songList"></ul>
+        <audio id="audioPlayer" controls>
+            <source id="audioSource" src="" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+</div>
+
+
+
+</body>
+</html>
+           
